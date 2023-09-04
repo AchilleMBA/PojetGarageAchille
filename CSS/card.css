@@ -1,0 +1,106 @@
+
+h1{
+    font-size: 65px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    font-style: italic;
+    opacity: 0.75;
+    color: rgba(18, 16, 16, 0.872);
+    
+}
+
+.container{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 300px;
+  height: 450px;
+  padding: 10px;
+  margin: 7px;
+
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px  #ecd9df;
+
+  position: relative;
+;
+  background: linear-gradient(#ffffff, #000000);
+}
+
+.info h2{
+    font-size: 26px;
+    margin-left: 2px;
+    line-height: 1;
+    color:black;
+  }
+
+  .card .caracteristic{
+
+    color: #ecd9df;
+    font-size: 18px;
+
+  }
+
+  .card .price{
+
+    color: #da813f;
+    font-size: 20px;
+    font-weight: bold;
+
+
+  }
+
+  .btn{
+    font-size: 15px;
+
+    position: absolute;
+
+    width: 120px;
+    height: 40px;
+    margin-left: 85px;
+    margin-top: 20px;
+
+    border-radius:5px;
+    border: none;
+    cursor: pointer;
+  
+    box-shadow: 3px 3px 10px orange;
+    
+    
+
+
+}
+
+.image_dolorean_2 {
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+  background-image: url("/GARAGE_PARROT/PojetGarageAchille/PHOTOS/dolorean/dolorean-2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.ford_gran_torino_2
+{
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+  background-image: url("/GARAGE_PARROT/PojetGarageAchille/PHOTOS/Ford\ grand\ torino/Gran-torino3.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.pontiac_firebird{
+
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+  background-image: url("/GARAGE_PARROT/PojetGarageAchille/PHOTOS/Pontiac\ Firebird/pontiac-firebird-9911-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
