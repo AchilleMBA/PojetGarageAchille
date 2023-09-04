@@ -137,3 +137,12 @@ h1{
     background-position: center;
   
     }
+
+    .camaro_ZL1{
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    background-image: url("/GARAGE_PARROT/PojetGarageAchille/PHOTOS/camaro\ ZL1\ 2011/camaro-CHEVROLET.jpg");
+    background-size: cover;
+    background-position: center;
+    } 
