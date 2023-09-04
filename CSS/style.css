@@ -102,3 +102,41 @@ body{
     line-height: 30px;
     color :lightgray;
 }
+
+.voitures_cinema,
+.voitures_occasion,
+.Reparations,
+.informations
+{
+width: 200px;
+height: 50px;
+
+display:inline-block;
+
+border-radius: 5px;
+border: none;
+box-shadow: 3px 3px 10px orange;
+
+margin-left: 20px;
+margin-top: 30px;
+margin-bottom: 5px;
+padding-left: auto ;
+
+font-size: 16px;
+font-weight: bold;
+font-family: roboto;
+cursor: pointer;
+
+}
+
+.voitures_cinema{
+    margin-left: 280px;
+}
+
+
+
+h2{
+    font-size: 30Px;
+    margin-left: 35px;
+    color:lightgray ;
+}
