@@ -102,7 +102,11 @@ body{
     line-height: 30px;
     color :lightgray;
 }
+.main .car_cover{
 
+    width: 1600px;
+    object-fit: cover;
+}
 .voitures_cinema,
 .voitures_occasion,
 .Reparations,
