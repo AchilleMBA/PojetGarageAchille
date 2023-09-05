@@ -146,3 +146,85 @@ h1{
     background-size: cover;
     background-position: center;
     } 
+
+    .twingo{
+
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+      background-image: url("/GARAGE_PARROT/PojetGarageAchille/PHOTOS/twingo3/twingo1.png");
+      background-size: cover;
+      background-position: center;
+    
+    }
+    .kia_niro{
+    
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+      background-image: url("/GARAGE_PARROT/PojetGarageAchille/PHOTOS/KIA\ NIRO/kia-niro-gris-2.jpg");
+      background-size: cover;
+      background-position: bottom;
+    
+    }
+    .citroen{
+    
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+      background-image: url("/GARAGE_PARROT/PojetGarageAchille/PHOTOS/CITROEN\ C3/citroen-c3-rouge-1.jpg");
+      background-size: cover;
+      background-position: bottom;
+    
+    }
+    .Renault_koelos{
+    
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+      background-image: url("/GARAGE_PARROT/PojetGarageAchille/PHOTOS/RENAULT\ KOELOS/renault-koleos-gris-fonce-1.jpg");
+      background-size: cover;
+      background-position: bottom;
+    
+    }
+    .ford_focus{
+    
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+      background-image: url("/GARAGE_PARROT/PojetGarageAchille/PHOTOS/FORD\ FOCUS/ford-focus-noir-1.jpg");
+      background-size: cover;
+      background-position: center;
+    
+    }
+    .fiat_500{
+    
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+      background-image: url("/GARAGE_PARROT/PojetGarageAchille/PHOTOS/FIAT\ 500/fiat-500-blanc-1.jpg");
+      background-size: cover;
+      background-position: center;
+    
+    }
+    .Mercedes_ClassA{
+    
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+      background-image: url("/GARAGE_PARROT/PojetGarageAchille/PHOTOS/MERCEDES\ CLASS\ A/mercedes-classe-a-noir-1.jpg");
+      background-size: cover;
+      background-position:bottom;
+    
+    }
+    .Porshe_911{
+    
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+      background-image: url("/GARAGE_PARROT/PojetGarageAchille/PHOTOS/Porshe\ 911/porsche1.jpg");
+      background-size: cover;
+      background-position:bottom;
+    
+    }
+    
