@@ -3,10 +3,9 @@
     background-color: gray;
 }
 
-.ford_mustang_GT390 img{
+.ferrari_308_gts img{
     display: inline-block;
     width: 400px;
-    object-fit: cover;
     margin-left: 44px;
 
     border-radius: 15px;
