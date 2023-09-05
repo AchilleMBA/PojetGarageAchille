@@ -4,7 +4,8 @@ body{
     margin: 0;
     padding: 0;
     list-style: none;
-    background-image: linear-gradient(rgb(12, 12, 12),white);
+    background-color:linear-gradient(rgb(12, 12, 12),white); 
+
 }
 .header{
     display: flex;
@@ -73,6 +74,7 @@ body{
 .main h1{
 
     color: lightgray; 
+
     font-weight: bold;
     font-size: 50px;
     line-height: 12px;
