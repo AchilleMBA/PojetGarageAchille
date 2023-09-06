@@ -229,4 +229,14 @@ h1{
       background-position:bottom;
     
     }
+    .opel_corsa{
+    
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+      background-image: url("/GARAGE_PARROT/PojetGarageAchille/PHOTOS/opel\ corsa/opel-corsa-rouge-1.jpg");
+      background-size: cover;
+      background-position:top;
+    
+    }
     
