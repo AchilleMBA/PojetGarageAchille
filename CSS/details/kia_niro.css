@@ -1,0 +1,53 @@
+.body_caracteristique{
+    background-color: gray;
+}
+
+.kia_niro img{
+    display: inline-block;
+    width: 380px;
+    object-fit: cover;
+    margin-left: 44px;
+
+    border-radius: 15px;
+   
+}
+
+h1{
+
+    background-color: black;
+    color: aliceblue;
+
+    width: 500px;
+    padding: 10px;
+    margin-left: 48px;
+
+    border-radius: 9px;
+}
+.caracteristics_details{
+
+    display:inline-block;
+    width: 40%;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+
+.caracteristics_details p{
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 29px;
+    font-weight: bold;
+    padding: 15px;
+    background-color: gray;
+    border-radius: 9px;
+    border: solid 2px black;
+}
+
+.home{
+
+ font-size: 20px;
+ cursor: pointer;
+ margin-left: 45px;
+}
