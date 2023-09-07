@@ -12,11 +12,18 @@
 
 <h1>Formulaire</h1>
 
-<form>
-    <label for="nom">nom:
+<p>
+    Merci de remplir le formulaire ci-dessous, 
+    en nous indiquant l'objet de votre demande.
+
+</p>
+
+<div class="container">
+<form id="register-form">
+    <label for="nom">Nom:
         <input type="text" id="nom" name="nom" required>
     </label>
-    <label for="prenom">prenom:
+    <label for="prenom">Prenom:
         <input type="text" id="prenom" name="prenom" required>
     </label>
     <label for="email">E-mail:
@@ -34,11 +41,16 @@
     <label for="postcode">Code postal:
         <input type="text" id="postcode" name="postecode" required>
     </label>
-    <label for="conditions">J'accepte les conditions en cochant ici:
-        <input type="checkbox" id="conditions" name="conditions" required>
+
+    <label for="message">Message:
+        <textarea id="message" name="message" rows="9" cols="33">
+            
+        </textarea>
     </label>
+
     <button type="submit">Valider</button>
 </form>
+    </div>
 
 <script src="/GARAGE_PARROT/PojetGarageAchille/JAVASCRIPT/formulaire.js"></script>
 </body>
