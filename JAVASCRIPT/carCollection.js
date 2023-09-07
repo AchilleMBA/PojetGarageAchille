@@ -2,6 +2,7 @@
 const carCollection = [
 
     {
+        
         name: 'delorean',
         year : 1980,
         type : 'essence',
@@ -45,7 +46,7 @@ const carCollection = [
 
     },
     {
-        name: 'fcamaro_ZL1',
+        name: 'camaro_ZL1',
         year : 2011,
         type : 'essence',
         km : 90000,
