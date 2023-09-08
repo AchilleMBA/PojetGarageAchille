@@ -1,33 +1,33 @@
 
 
-const registerForm = document.getElementById("register-form")
+ const registerForm = document.getElementById("#register-form");
+ const nameInput = document.getElementById("#name");
+ const firstNameInput = document.getElementById("#firstName");
+ const emailInput = document.getElementById("#email");
+ const phoneInput = document.getElementById("#phone");
+ const adressInput = document.getElementById ("#adress");
+ const cityInput = document.getElementById ("#city");
+ const postcodeInput = document.getElementById ("#postcode");
+ const messageInput = document.getElementById ("#message");
 
 
- registerForm.addEventListener("submit", function (event)  {
- event.preventDefault()
 
- const nameInput = document.getElementById("name").value
- const firstNameInput = document.getElementById("firstName").value
- const emailInput = document.getElementById("email").value
- const phoneInput = document.getElementById("phone").value
- const adressInput = document.getElementById ("adress").value
- const cityInput = document.getElementById ("city").value
- const postcodeInput = document.getElementById ("postcode").value
- const messageInput = document.getElementById ("message").value
+ registerForm.addEventListener("submit",event=> {
+ event.preventDefault();
+
+ })
 
  
- /*
- const name = nameInput.value
- const firstName = firstNameInput.value
- const email = emailInput.value
- const phone = phoneInput.value
- const adress = adressInput.value
- const city = cityInput.value
- const postcode = postcodeInput.value
- const message = messageInput.value
+ const nameValue = nameInput.value.trim();
+ const firstNameValue = firstNameInput.value.trim();
+ const emailValue = emailInput.value.trim();
+ const phoneValue = phoneInput.value.trim();
+ const adressValue = adressInput.value.trim();
+ const cityValue = cityInput.value.trim();
+ const postcodeValue = postcodeInput.value.trim();
+ const messageValue = messageInput.value.trim();
 
- })
- */
-        
- })
- console.log ("hello");  
+
+console.log ("hello")
+
+  
