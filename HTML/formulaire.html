@@ -18,14 +18,16 @@
 
 </p>
 
-<div class="container">
 <form id="register-form" action=""  method="">
     <label for="name">Nom:
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required minlength="2">
     </label>
+
     <label for="firstName">Prenom:
-        <input type="text" id="firstName" name="firstName" required>
+        <input type="text" id="firstName" name="firstName" required minlength="2">
     </label>
+
+    
     <label for="email">E-mail:
         <input type="email" id="email" name="email" required>
     </label>
@@ -39,7 +41,7 @@
         <input type="text" id="city" name="city" required>
     </label>
     <label for="postcode">Code postal:
-        <input type="text" id="postcode" name="postecode" required>
+        <input type="text" id="postcode" name="postecode" required minlength="5" maxlength="5">
     </label>
 
     <label for="message">Message:
@@ -48,11 +50,14 @@
         </textarea>
     </label>
 
+
     <button type="submit">Valider</button>
 </form>
-    </div>
+    
+    
+<script src="/GARAGE_PARROT/PojetGarageAchille/JAVASCRIPT/formulaire.js">
 
-<script src="/GARAGE_PARROT/PojetGarageAchille/JAVASCRIPT/formulaire.js"></script>
+</script>
 </body>
 
 </html>
