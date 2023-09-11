@@ -1,0 +1,25 @@
+{
+  "name": "node-car-api",
+  "version": "1.0.0",
+  "description": "An API to handle some cars.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AchilleMBA/PojetGarageAchille.git"
+  },
+  "author": "Achille MBA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AchilleMBA/PojetGarageAchille/issues"
+  },
+  "homepage": "https://github.com/AchilleMBA/PojetGarageAchille#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
