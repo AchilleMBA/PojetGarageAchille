@@ -3,7 +3,17 @@ const morgan = require ('morgan')
 const favicon =require('serve-favicon')
 const bodyParser = require('body-parser')
 const {success, getUniqueId} = require('./helper.js')
-let cars = require('./mock-car')
+const mysql =require('mysql');
+
+const connection =mysql.createConnection({
+
+  host: 'lmyurl.at', // ou l'adresse du serveur MySQL
+  user: 'myusername', // ou le nom d'utilisateur
+  password: 'mydatabase', // ou le mot de passe
+  database: 'mypassword' // ou le nom de la base de données
+
+})
+
 
 
 
@@ -29,7 +39,6 @@ app.get('/api/cars', (req, res)=>{
 const message =' Voici la liste des voitures'
 res.json(success(message, cars))
 })
-
 app.post('/api/cars', (req, res) => {
     const id = getUniqueId(cars)
     const carCreated = { ...req.body, ...{id: id, created: new Date()}}
