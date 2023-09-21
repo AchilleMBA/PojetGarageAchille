@@ -5,8 +5,8 @@ table {
   
   .table th {
     text-align: left;
-    border-top: 2px solid #009578;
-    border-bottom: 2px solid #009578;
+    border-top: 2px solid #da813f;
+    border-bottom: 2px solid #da813f;
   }
   
   .table td,
@@ -31,3 +31,4 @@ table {
     padding-right: 10px;
   }
 
+  

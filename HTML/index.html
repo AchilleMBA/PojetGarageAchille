@@ -16,7 +16,7 @@
 
     <title>GARRAGE V.PARROT</title>
 </head>
-<body>
+<body class="big_container">
     <div class="header">
         <div class="left-section">
             <img class="logo_ach" src="/PojetGarageAchille/PHOTOS/logo/logoach.png" alt="logo_achille">
@@ -27,16 +27,17 @@
         </div>
     
         <div class="right-section">
-            <i class="fa-solid fa-house fa-xl" style="color:#da813f"></i>
+            <div> <i class="fa-solid fa-house fa-xl" id="ancre_home" style="color:#da813f"></i></div>
             <i class="fa-solid fa-user fa-xl" style="color: #da813f;"></i>
             <i class="fa-solid fa-bars fa-xl" style="color: #da813f;"></i>
-            <i class="fa-solid fa-envelope fa-xl" style="color:#da813f;"></i>
+            <div><a href="/PojetGarageAchille/HTML/formulaire.html"><i class="fa-solid fa-envelope fa-xl" style="color:#da813f;"></i></a></div>
+                
         </div>
     </div>
 
     <main class="main">
         
-        <div class=>
+        <div>
             <div>
                 <h1 class="specialiste_vehicule">SPECIALISTE VEHICULES</h1>   
                 <h1 class="collection_occasion">COLLECTIONS ET OCCASIONS</h1>   
@@ -58,12 +59,17 @@
 
 
         <section >
-            <button class="voitures_cinema" type="submit"> VOITURES CINEMA
-                
+            <button class="voitures_cinema"  type="submit"> 
+                <a href="#ancre_voiture_cinema">VOITURES CINEMA</a>
             </button>
-            <button class="voitures_occasion" type="submit">OCCASION</button>
+
+            <button class="voitures_occasion" type="submit">
+                <a href="#ancre_voiture_occasions">OCCASIONS</a>
+            </button>
             <button class="Reparations" type="submit">REPARATIONS</button>
-            <button class="informations" type="submit">INFORMATIONS</button>
+            <button class="collection" type="submit">
+                <a href="/PojetGarageAchille/RANGE/range.html" target="_blank">COLLECTIONS</a>
+            </button>
             <button class="formulaire_form" type="submit">
                 <a href="/PojetGarageAchille/HTML/formulaire.html" target="blank">FORMULAIRE</a>
             </button>
@@ -82,7 +88,8 @@
 
 
 
-    <h2 class="h2_car"> Voitures de cinema</h2> 
+    <h2 class="h2_car" id="ancre_voiture_cinema"> Voitures de cinema </h2>
+       
 
     <div class="container">
     
@@ -216,7 +223,7 @@
     </div>
 
 
-    <h2 style="background-color:linear-gradient(rgb(12, 12, 12),white)"> Voitures occsions</h2> 
+    <h2 class="h2_car" id="ancre_voiture_occasions"> Voitures Occaz</h2> 
 
     <div class="container">
 
@@ -446,6 +453,7 @@
             <button class="formulaire_form" type="submit">
                 <a href="/PojetGarageAchille/HTML/formulaire.html" target="blank">FORMULAIRE</a>
             </button>
+            <a href="#ancre_home">MENU</a>
 
           </div>
   

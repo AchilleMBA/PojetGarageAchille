@@ -113,7 +113,7 @@ body{
 .voitures_cinema,
 .voitures_occasion,
 .Reparations,
-.informations,
+.collection,
 .formulaire_form
 {
 width: 150px;
@@ -351,5 +351,64 @@ footer {
     }
 
 
+
+}
+
+@media (min-width : 320px) and (max-width:1024px){
+   
+        .header{ 
+            
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                background-color: aliceblue;
+                margin: auto;
+
+            }
+
+            .main .text_intro{
+                flex-direction: column;
+                margin-top: 170px;
+                margin-left: 5px;
+                margin-right: 5px;
+                
+            }
+        .car_cover{
+                display:none
+            
+        }
+        .voitures_cinema,
+        .voitures_occasion,
+        .Reparations,
+        .collection,
+        .formulaire_form{
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-left: 15px;
+            margin-right: 5px;
+
+        }
+        .voitures_cinema {
+           margin-left:15px;
+        }
+        .specialiste_vehicule,
+        .collection_occasion{
+          display:none;
+    }
+    .h2_car{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .footer-contact h{
+        flex-direction: column;
+        align-items: center;
+    }
 
 }

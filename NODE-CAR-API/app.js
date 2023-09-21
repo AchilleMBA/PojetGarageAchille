@@ -1,70 +1,34 @@
 const express = require('express')
-const morgan = require ('morgan')
-const favicon =require('serve-favicon')
+const favicon = require('serve-favicon')
 const bodyParser = require('body-parser')
-const {success, getUniqueId} = require('./helper.js')
-const mysql =require('mysql');
-
-const connection =mysql.createConnection({
-
-  host: 'lmyurl.at', // ou l'adresse du serveur MySQL
-  user: 'myusername', // ou le nom d'utilisateur
-  password: 'mydatabase', // ou le mot de passe
-  database: 'mypassword' // ou le nom de la base de données
-
-})
-
-
-
+const cors = require('cors')
+const sequelize = require('./src/db/sequelize')
 
 const app = express()
-const port = 3000
-
+const port = process.env.PORT || 3000
 
 app
-    .use(favicon(__dirname + '/favicon.ico'))   
-    .use(morgan('dev'))
-    .use(bodyParser.json())
-    
-    
+.use(favicon(__dirname + '/favicon.ico'))
+.use(bodyParser.json())
+.use(cors())
 
-app.get('/api/cars/:id', (req, res) => {
-    const id = parseInt(req.params.id)
-    const car = cars.find(car => car.id === id)
-    const message = 'Une voiture a bien été choisie.'
-    res.json(success(message, car))
-  })
+sequelize.initDb()
 
-app.get('/api/cars', (req, res)=>{
-const message =' Voici la liste des voitures'
-res.json(success(message, cars))
+app.get('/', (req, res) => {
+  res.json('Hello, Heroku ! 👋')
 })
-app.post('/api/cars', (req, res) => {
-    const id = getUniqueId(cars)
-    const carCreated = { ...req.body, ...{id: id, created: new Date()}}
-    cars.push(carCreated)
-    const message = `La voiture ${carCreated.name} est désormais dans le gararge.`
-    res.json(success(message, carCreated))
-  })
-  
-  app.put('/api/cars/:id', (req, res) => {
-    const id = parseInt(req.params.id);
-    const carUpdated = { ...req.body, id: id }
-    cars = cars.map(car => {
-     return car.id === id ? carUpdated : car
-    })
-     
-    const message = `Le vehicule ${carUpdated.name} a bien été modifié.`
-    res.json(success(message, carUpdated))
-   });
 
-   app.delete('/api/cars/:id', (req, res) => {
-    const id = parseInt(req.params.id)
-    const carDeleted = cars.find(car => car.id === id)
-    cars = cars.filter(car => car.id !== id)
-    const message = `Le véhicule ${carDeleted.name} a bien été supprimé.`
-    res.json(success(message, carDeleted))
-  });
-    
-  
+require('./src/routes/findAllcars')(app)
+require('./src/routes/findcarByPk')(app)
+require('./src/routes/createcar')(app)
+require('./src/routes/updatecar')(app)
+require('./src/routes/deletecar')(app)
+require('./src/routes/login')(app)
+
+// On gère les routes 404.
+app.use(({res}) => {
+  const message = 'Impossible de trouver la ressource demandée ! Vous pouvez essayer une autre URL.'
+	res.status(404).json({message});
+});
+
 app.listen(port, () => console.log(`Notre application Node est démarrée sur : http://localhost:${port}`))

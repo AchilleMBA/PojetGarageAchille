@@ -66,4 +66,23 @@
       transform: translateX(-400%);
     }
   } 
+
+  @media screen and(max-width :415px){
+
+    .slider-container{
+      display :flex,
+      
+    }    
+
+  }
   
+  @media (min-width : 320px) and (max-width:1024px){
+    .slider-container,
+    .slider-1
+
+   {
+     flex-direction:column;
+     
+     
+    }
+ }
