@@ -4,7 +4,7 @@ export const CARS: car[] = [
 
     {
         id : 1,
-        name: "delorean",
+        name: "Delorean",
         year : 1980,
         type : "essence",
         km : 29000,
@@ -19,7 +19,7 @@ export const CARS: car[] = [
     
     {   
         id: 2,
-        name: "ford_gran_torino",
+        name: "Ford gran torino",
         year : 1973,
         type : "essence",
         km : 32000,
@@ -32,7 +32,7 @@ export const CARS: car[] = [
     },
 
     {   id: 3,
-        name: "pontiac_firebird",
+        name: "Pontiac firebird",
         year : 1986,
         type : "essence",
         km : 90000,
@@ -46,7 +46,7 @@ export const CARS: car[] = [
 
     {   
         id: 4,
-        name: "ford_mustang_GT390",
+        name: "Ford mustang GT390",
         year : 1968,
         type : "essence",
         km : 6000,
@@ -59,7 +59,7 @@ export const CARS: car[] = [
     },
     {
         id: 5,
-        name: "ferrari_308_gts",
+        name: "Ferrari 308 gts",
         year : 1980,
         type : "essence",
         km : 33000,
@@ -72,7 +72,7 @@ export const CARS: car[] = [
     },
     { 
         id : 6,
-        name: "Dodge_chargeur_1970",
+        name: "Dodge chargeur 1970",
         year : 1970,
         type : "essence",
         km : 86000,
@@ -85,7 +85,7 @@ export const CARS: car[] = [
     },
     {   
         id: 7,
-        name: "camaro_ZL1",
+        name: "camaro ZL1",
         year : 2011,
         type : "essence",
         km : 90000,
@@ -99,7 +99,7 @@ export const CARS: car[] = [
 
     {   
         id: 8,
-        name: "twingo",
+        name: "Twingo",
         year : 2018,
         type : "essence",
         km : 36060,
@@ -113,7 +113,7 @@ export const CARS: car[] = [
 
     {   
         id: 9,
-        name: "kia_niro",
+        name: "Kia niro",
         year : 2021,
         type : "hybride",
         km : 70329,
@@ -127,7 +127,7 @@ export const CARS: car[] = [
 
     {   
         id: 10,
-        name: "citroen",
+        name: "Citroen",
         year : 2020,
         type : "essence",
         km : 31163,
@@ -141,7 +141,7 @@ export const CARS: car[] = [
 
     {   
         id: 11,
-        name: "Renault_koelos",
+        name: "Renault koelos",
         year : 2020,
         type : "essence",
         km : 31163,
@@ -155,7 +155,7 @@ export const CARS: car[] = [
 
     {   
         id: 12,
-        name: "ford_focus",
+        name: "Ford focus",
         year : 2019,
         type : "essence",
         km : 48159,
@@ -170,7 +170,7 @@ export const CARS: car[] = [
 
     {   
         id: 13,
-        name: "fiat_500",
+        name: "Fiat 500",
         year : 2023,
         type : "essence",
         km : 501,
@@ -185,7 +185,7 @@ export const CARS: car[] = [
    
     {   
         id: 14,
-        name: "Porshe_911",
+        name: "Porshe 911",
         year : 1989,
         type : "essence",
         km : 112654,
@@ -197,7 +197,7 @@ export const CARS: car[] = [
     },
     {   
         id: 15,
-        name: "Mercedes_ClassA",
+        name: "Mercedes Class A",
         year : 2018,
         type : "diesel",
         km : 93296,
@@ -211,7 +211,7 @@ export const CARS: car[] = [
     },
     {   
         id: 16,
-        name: "opel_corsa",
+        name: "Opel corsa",
         year : 2020,
         type : "diesel",
         km : 31138,

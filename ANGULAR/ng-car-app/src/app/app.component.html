@@ -1,2 +1,21 @@
 <!DOCTYPE html>
-<h1>hello</h1>
+<h1>LISTE DE VOITURE</h1>
+<input 
+    #input
+    (keyup.enter)="selectCar(input.value)"
+    type="number"
+    
+/>
+
+<p *ngIf="carSelected">
+    Vous avez sélectionné la voiture : {{carSelected.name}}
+</p>
+<p *ngIf="!carSelected">
+    Aucune voiture n'a été trouvée.
+</p>
+
+<p *ngFor="let car of carList">
+    {{car.name}}
+</p>
+
+
