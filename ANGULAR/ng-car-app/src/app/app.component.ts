@@ -4,7 +4,7 @@ import { CARS } from './mock-car-list';
 
 @Component({
   selector: 'app-root',
-  template: `<h1> Liste de voiture</h1>`
+  templateUrl: 'app.component.html'
 })
 export class AppComponent implements OnInit {
   carList: car[] = CARS;
