@@ -9,7 +9,7 @@ export const CARS: car[] = [
         type : "essence",
         km : 29000,
         price:29000,
-        picture : "/PojetGarageAchille/PHOTOS/dolorean/dolorean-2.jpg",
+        picture : "/PICS/dolorean-2.jpg",
         category : "collection" ,
         created: new Date ()
       

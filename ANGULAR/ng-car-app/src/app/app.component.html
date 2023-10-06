@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<h1>LISTE DE VOITURE</h1>
-<input 
-    #input
-    (keyup.enter)="selectCar(input.value)"
-    type="number"
-    
-/>
+<h1 class="center">LISTE DE VOITURE</h1>
 
-<p *ngIf="carSelected">
-    Vous avez sélectionné la voiture : {{carSelected.name}}
-</p>
-<p *ngIf="!carSelected">
-    Aucune voiture n'a été trouvée.
-</p>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let car of carList" class="col s6 m4">
+            <div class="card horizontal"(click)="selectCar" appBorderCard>
+                <div class="card-image">
+                    <img [src]="car.picture"/>
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>{{car.name}}</p>
+                        <p><small>{{car.created | date:"dd/MM/yyyy"}}</small></p>
 
-<p *ngFor="let car of carList">
-    {{car.name}}
-</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
 
 
