@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DetailCarComponent } from './detail-car/detail-car.component';
-import { ListCarComponent } from './list-car/list-car.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: 'cars', component: ListCarComponent},
-  { path: 'car/:id', component:DetailCarComponent},
-  { path: '', redirectTo: 'cars', pathMatch: 'full'}
+  
+  { path: '', redirectTo: 'cars', pathMatch: 'full'},
+  {path: '**', component:PageNotFoundComponent},
+  // {path: '**', component:PageNotFoundComponent}, intercepte tote les routes, CHEMIN A METTRE A LA FIN.
 ];
 
 @NgModule({

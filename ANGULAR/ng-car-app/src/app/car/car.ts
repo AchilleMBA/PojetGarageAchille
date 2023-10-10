@@ -1,4 +1,5 @@
 export class car{
+    [x: string]: any;
     id: number;
     name: string;
     year: number;

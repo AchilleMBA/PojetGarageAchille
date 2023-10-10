@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { car } from '../car';
-import { CARS } from '../mock-car-list';
+import { CarService } from '../car.service';
 
 @Component({
   selector: 'app-detail-car',
@@ -14,16 +14,22 @@ export class DetailCarComponent implements OnInit {
   carList: car [];
   car: car | undefined;
 
-  constructor (private route: ActivatedRoute) { }
+  constructor (
+    private route: ActivatedRoute, 
+    private router: Router,
+    private carService: CarService
+    ) { }
 
   ngOnInit (){
-    this.carList = CARS ;
+    
     const carId: string | null= this.route.snapshot.paramMap.get('id');
     if(carId){
-      this.car = this.carList.find(car => car.id == +carId)
+      this.car = this.carService.getCarById(+carId);
     
     }
     
   }
-
+  goToCarList (){
+    this.router.navigate(['/cars']);
+  }
 }

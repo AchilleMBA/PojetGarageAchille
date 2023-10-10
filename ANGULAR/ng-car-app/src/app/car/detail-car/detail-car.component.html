@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<div *ngIf="car" class="row">
+    <div class="col s12 m8 offset-m2">
+    <h2 class="header center">{{ car.name }}</h2>
+    <div class="card horizontal hoverable">
+      <div class="card-image">
+        <img [src]="car.picture">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <table class="bordered striped">
+            <tbody>
+              <tr>
+                <td>Nom</td>
+                <td><strong>{{ car.name }}</strong></td>
+              </tr>
+              <tr>
+                <td>Année</td>
+                <td><strong>{{ car.year }}</strong></td>
+              </tr>
+              <tr>
+                <td>Type</td>
+                <td><strong>{{ car.type}}</strong></td>
+              </tr>
+              <tr>
+                <td>Kilometre</td>
+                <td><strong>{{ car.km}}</strong></td>
+              </tr>
+              <tr>
+                <td>Prix</td>
+                <td><strong>{{ car.price}}</strong></td>
+              </tr>
+              <tr>
+                <td>Categorie</td>
+                <td>
+                  <span *ngFor="let category of car.category" class="{{ category | carCategoryColor }}">{{ category }}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Date de création</td>
+                <td><em>{{ car.created | date:"dd/MM/yyyy" }}</em></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-action">
+          <a (click)="goToCarList()">Retour</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <h4 *ngIf='!car' class="center">Aucune voiture à afficher !</h4>

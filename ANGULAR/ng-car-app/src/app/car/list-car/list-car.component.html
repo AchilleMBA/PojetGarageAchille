@@ -3,7 +3,7 @@
 <div class= "container" >
     <div class= "row" >
         <div *ngFor='let car of carList' class= "col s6 m4" >
-            <div class= "card horizontal" appBorderCard>
+            <div (click)="goToCar(car)" class= "card horizontal" appBorderCard>
                 <div class="card-image">
                     <img [src]="car.picture"/>
                 </div>

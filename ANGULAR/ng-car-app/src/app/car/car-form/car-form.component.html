@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<form *ngIf="car" (ngSubmit)="onSubmit()" #carForm="ngForm">
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div class="card-panel">
+    
+          <!-- car name -->
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" class="form-control" id="name"
+                    required
+                    pattern="^[a-zA-Z0-9àéèç]{1,25}$"
+                   [(ngModel)]="car.name" name="name"
+                   #name="ngModel">
+    
+            <div [hidden]="name.valid || name.pristine"
+                  class="card-panel red accent-1">
+                  Le nom de la  voiture est requise (1-25).
+            </div>
+          </div>
+    
+          <!-- car year -->
+          <div class="form-group">
+            <label for="year">Année</label>
+            <input type="number" class="form-control" id="hp"
+                    required
+                    pattern="^(19|20)\d{2}$"
+                   [(ngModel)]="car.year" name="year"
+                   #hp="ngModel">
+             <div [hidden]="hp.valid || hp.pristine"
+                   class="card-panel red accent-1">
+                   Année invalide. Veuillez saisir une année au format YYYY (par exemple, 2023).
+             </div>
+          </div>
+    
+          <!-- car type -->
+          <div class="form-group">
+            <label for="type">Type</label>
+            <input type="text" class="form-control" id="type"
+                    required
+                    pattern="^[a-zA-Z0-9àéèç]{1,25}$"
+                   [(ngModel)]="car.type" name="type"
+                   #cp="ngModel">
+             <div [hidden]="cp.valid || cp.pristine"
+                   class="card-panel red accent-1">
+                   Veuillez renseigner un type de carburant.
+             </div>
+          </div>
+    
+          <!-- car kilometre -->
+          <div class="form-group">
+            <label for="km">Type</label>
+            <input type="text" class="form-control" id="km"
+                    required
+                    pattern="^\d+$"
+                   [(ngModel)]="car.km" name="km"
+                   #cp="ngModel">
+             <div [hidden]="cp.valid || cp.pristine"
+                   class="card-panel red accent-1">
+                   Veuillez renseigner les kilometres.
+             </div>
+          </div>
+    
+          <!-- car Prix -->
+          <div class="form-group">
+            <label for="price">Type</label>
+            <input type="text" class="form-control" id="price"
+                    required
+                    pattern="^\d+(?:\.\d{1,2})?$"
+                   [(ngModel)]="car.price" name="price"
+                   #cp="ngModel">
+             <div [hidden]="cp.valid || cp.pristine"
+                   class="card-panel red accent-1">
+                   Veuillez entrer un prix valide au format numérique (par exemple, 123.45 €).
+             </div>
+          </div>
+    
+          <!-- car category -->
+          <form class="form-group">
+            <label for="categories">Categories</label>
+            <p *ngFor="let category of categories">
+              <label>
+                <input type="checkbox"
+                  class="filled-in"
+                  id="{{ category }}"
+                  [value]="category"
+                  [checked]="hasCategory(category)"
+                  [disabled]="!iscategoriesValid(category)"
+                  (change)="selectCategory($event, category)"/>
+                <span [attr.for]="category">
+                  <div class="{{ category | carCategoryColor }}">
+                    {{ category }}
+                  </div>
+                </span>
+              </label>
+            </p>
+          </form>
+    
+          <!-- Submit button -->
+          <div class="divider"></div>
+          <div class="section center">
+            <button type="submit"
+              class="waves-effect waves-light btn"
+              [disabled]="!carForm.form.valid">
+              Valider</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+  </form>
+  <h3 *ngIf="!car" class="center">Aucun voiture à éditer...</h3>
