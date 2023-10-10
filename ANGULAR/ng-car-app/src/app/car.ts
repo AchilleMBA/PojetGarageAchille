@@ -6,6 +6,6 @@ export class car{
     km: number;
     price: number;
     picture: string;
-    category: string;
+    category: Array <string>;
     created: Date;
 }

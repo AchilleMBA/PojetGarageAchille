@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<div class= "container" >
+    <div class= "row" >
+        <div *ngFor='let car of carList' class= "col s6 m4" >
+            <div class= "card horizontal" appBorderCard>
+                <div class="card-image">
+                    <img [src]="car.picture"/>
+                </div>
+                
+                <div class= "card-stacked" >
+                    <div class= "card-content" >
+                        <p>{{car.name}}</p>
+                        <p><small>{{car.created | date:"dd/MM/yyyy"}}</small></p>
+                        <span *ngFor="let category of car.category" class="{{category | carCategoryColor }}">
+
+                            {{category}}
+                        </span>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</div>
