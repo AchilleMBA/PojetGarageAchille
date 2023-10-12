@@ -11,6 +11,7 @@ import { CarService } from '../car.service';
 export class CarFormComponent implements OnInit {
   @Input() car: car; // Corrected casing
   categories: string[];
+  isAddForm:boolean;
 
   constructor (
     private carService: CarService,
@@ -19,6 +20,7 @@ export class CarFormComponent implements OnInit {
 
   ngOnInit() {
     this.categories = this.carService.getCarCategoryList();
+    this.isAddForm = this.router.url.includes ('add');
   }
 
   hasCategory(category: string): boolean {
@@ -46,8 +48,15 @@ export class CarFormComponent implements OnInit {
     }
   }
 
-  onSubmit() { // Renamed from onsubmit to onSubmit
-    console.log('Submit form!');
-    this.router.navigate(['/car', this.car.id]);
+  onSubmit() { 
+    if(this.isAddForm){
+      this.carService.addCar(this.car)
+      .subscribe((car: car) => this.router.navigate(['/car', car.id]));
+
+    }else{
+      this.carService.updateCar(this.car)
+      .subscribe(() => this.router.navigate(['/car', this.car.id]));
+        }
+      } 
+
   }
-}

@@ -9,10 +9,12 @@ import { CarService } from './car.service';
 import { FormsModule } from '@angular/forms';
 import { CarFormComponent } from './car-form/car-form.component';
 import { EditCarComponent } from './edit-car/edit-car.component';
+import { AddCarComponent } from './add-car/add-car.component';
 
 
 const carRoutes: Routes = [
   {path: 'edit/car/:id', component: EditCarComponent},
+  {path: 'car/add', component:AddCarComponent},
   { path: 'cars', component: ListCarComponent},
   { path: 'car/:id', component:DetailCarComponent},
 ]
@@ -27,6 +29,7 @@ const carRoutes: Routes = [
     CarCategoryColorPipe,
     CarFormComponent,
     EditCarComponent,
+    AddCarComponent,
   ],
   imports: [
     CommonModule,

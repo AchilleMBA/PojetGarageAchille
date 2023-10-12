@@ -18,6 +18,19 @@
                         Le nom de la voiture est requis (1-25).
                     </div>
                 </div>
+                <!-- car picture -->
+                <div *ngIf=" isAddForm"class="form-group">
+                    <label for="picture">Image</label>
+                    <input type="text" class="form-control" id="picture"
+                           required
+                           [(ngModel)]="car.picture" name="picture"
+                           #picture="ngModel">
+    
+                    <div [hidden]="picture.valid || picture.pristine"
+                         class="card-panel red accent-1">
+                       L'image de la voiture est requise.
+                    </div>
+                </div>
     
                 <!-- car year -->
                 <div class="form-group">

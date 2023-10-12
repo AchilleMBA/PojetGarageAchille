@@ -22,7 +22,8 @@ export class ListCarComponent {
 
     ngOnInit(){
 
-      this.carList = this.carService.getCarList();
+      this.carService.getCarList()
+      .subscribe(carList => this.carList = carList);
 
     }
 

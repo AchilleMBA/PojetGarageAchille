@@ -24,11 +24,18 @@ export class DetailCarComponent implements OnInit {
     
     const carId: string | null= this.route.snapshot.paramMap.get('id');
     if(carId){
-      this.car = this.carService.getCarById(+carId);
+    this.carService.getCarById(+carId)
+    .subscribe(car => this.car = car)
     
     }
-    
   }
+
+  deleteCar(car: car): void {
+    this.carService.deleteCarById(car.id).subscribe(() => {
+      this.goToCarList();
+    });
+  }
+
   goToCarList (){
     this.router.navigate(['/cars']);
   }

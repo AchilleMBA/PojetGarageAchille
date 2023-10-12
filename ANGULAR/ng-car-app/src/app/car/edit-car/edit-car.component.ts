@@ -25,7 +25,13 @@ export class EditCarComponent implements OnInit {
 
   ngOnInit() {
     const carId: string | null = this.route.snapshot.paramMap.get('id');
-    this.car = carId ? this.carService.getCarById(+carId) : undefined;
+    if(carId){
+      this.carService.getCarById(+carId)
+    .subscribe(car => this.car = car);
+    }else{
+      this.car = undefined;
+    }
+    
   }
 }
 
