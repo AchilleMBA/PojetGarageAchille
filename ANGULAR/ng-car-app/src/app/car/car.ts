@@ -16,7 +16,7 @@ export class car{
     type: string = 'essence',
     km: number = 100,
     price: number = 10000,
-    picture: string = '',
+    picture: string = 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/.png',
     category: string[] = ['collection'],
     created: Date = new Date()
 

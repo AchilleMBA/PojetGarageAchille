@@ -2,6 +2,7 @@
 
 <div class= "container" >
     <div class= "row" >
+        <app-search-car></app-search-car>
         <div *ngFor='let car of carList' class= "col s6 m4" >
             <div (click)="goToCar(car)" class= "card horizontal" appBorderCard>
                 <div class="card-image">

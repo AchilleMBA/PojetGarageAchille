@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { CarFormComponent } from './car-form/car-form.component';
 import { EditCarComponent } from './edit-car/edit-car.component';
 import { AddCarComponent } from './add-car/add-car.component';
+import { SearchCarComponent } from './search-car/search-car.component';
 
 
 const carRoutes: Routes = [
@@ -30,6 +31,7 @@ const carRoutes: Routes = [
     CarFormComponent,
     EditCarComponent,
     AddCarComponent,
+    SearchCarComponent,
   ],
   imports: [
     CommonModule,
