@@ -72,7 +72,7 @@ export const CARS: car[] = [
     },
     { 
         id : 6,
-        name: "Dodge chargeur 1970",
+        name: "Dodge chargeur",
         year : 1970,
         type : "essence",
         km : 86000,
