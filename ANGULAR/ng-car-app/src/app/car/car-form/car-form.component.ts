@@ -1,51 +1,53 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { car } from '../car';
+import { car } from '../car'; // Corrected casing
 import { CarService } from '../car.service';
 
 @Component({
   selector: 'app-car-form',
   templateUrl: './car-form.component.html',
+  styleUrls: ['./car-form.component.css']
 })
 export class CarFormComponent implements OnInit {
-  @Input() car: car;
+  @Input() car: car; // Corrected casing
   categories: string[];
 
   constructor (
     private carService: CarService,
-    private router:Router
-    ) { }
+    private router: Router
+  ) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.categories = this.carService.getCarCategoryList();
-
   }
 
-  hasCategory(category:string): boolean{
+  hasCategory(category: string): boolean {
     return this.car.category.includes(category);
-
   }
 
-  selectCategory($event: Event, category: string){
+  isCategoryValid(category: string): boolean {
+    if (this.car.category.length === 1 && this.hasCategory(category)) {
+      return false;
+    }
+    if (this.car.category.length > 2 && !this.hasCategory(category)) {
+      return false;
+    }
+    return true; // Add a return true for cases where the conditions are not met.
+  }
+
+  selectCategory($event: Event, category: string) {
     const isChecked: boolean = ($event.target as HTMLInputElement).checked;
 
-    if(isChecked) {
+    if (isChecked) {
       this.car.category.push(category);
-    }else{
+    } else {
       const index = this.car.category.indexOf(category);
       this.car.category.splice(index, 1);
     }
+  }
 
-    isCategoryValid(category: string): boolean { // Cette fonction était mal définie dans votre code initial.
-      if (this.car.category.length === 1 && this.hasCategory(category)) {
-        return false;
-      }
-      return true; // Ajoutez un return true pour le cas où la condition n'est pas satisfaite.
-    }
-  
-    onSubmit() { // Renommez la fonction "onsubmit" en "onSubmit" pour respecter la convention de nommage.
-      console.log('Submit form!');
-      this.router.navigate(['/car', this.car.id]);
-    }
+  onSubmit() { // Renamed from onsubmit to onSubmit
+    console.log('Submit form!');
+    this.router.navigate(['/car', this.car.id]);
   }
 }
