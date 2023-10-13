@@ -9,7 +9,7 @@ export const CARS: car[] = [
         type : "essence",
         km : 29000,
         price:29000,
-        picture : "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/037.png", 
+        picture : "/ANGULAR/H1118-L315958095_original.jpg", 
         category : ["collection" , "cinema"] ,
         created: new Date ()
       

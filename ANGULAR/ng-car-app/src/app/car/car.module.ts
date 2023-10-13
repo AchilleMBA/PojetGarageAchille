@@ -11,13 +11,15 @@ import { CarFormComponent } from './car-form/car-form.component';
 import { EditCarComponent } from './edit-car/edit-car.component';
 import { AddCarComponent } from './add-car/add-car.component';
 import { SearchCarComponent } from './search-car/search-car.component';
+import { LoaderComponent } from './loader/loader.component';
+import { AuthGuard } from '../auth.guard';
 
 
 const carRoutes: Routes = [
-  {path: 'edit/car/:id', component: EditCarComponent},
-  {path: 'car/add', component:AddCarComponent},
-  { path: 'cars', component: ListCarComponent},
-  { path: 'car/:id', component:DetailCarComponent},
+  {path: 'edit/car/:id', component: EditCarComponent, canActivate: [AuthGuard]},
+  {path: 'car/add', component:AddCarComponent, canActivate: [AuthGuard]},
+  { path: 'cars', component: ListCarComponent, canActivate: [AuthGuard]},
+  { path: 'car/:id', component:DetailCarComponent, canActivate: [AuthGuard]},
 ]
 
 
@@ -32,6 +34,7 @@ const carRoutes: Routes = [
     EditCarComponent,
     AddCarComponent,
     SearchCarComponent,
+    LoaderComponent,
   ],
   imports: [
     CommonModule,

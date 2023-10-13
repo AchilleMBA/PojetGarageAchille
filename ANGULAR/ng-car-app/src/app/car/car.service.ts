@@ -28,6 +28,9 @@ getCarById(carId: number): Observable<car|undefined> {
 }
 
 SearchCarList (term: string): Observable<car[]>{
+  if (term.length <= 1) {
+    return of ([]);
+  }
   return this.http.get<car[]>(`api/cars/?name=${term}`).pipe(
     tap((response) => this.log(response)),
     catchError((error) => this.handlError(error,[])) 
