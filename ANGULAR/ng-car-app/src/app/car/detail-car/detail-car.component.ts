@@ -30,10 +30,9 @@ export class DetailCarComponent implements OnInit {
     }
   }
 
-  deleteCar(car: car): void {
-    this.carService.deleteCarById(car.id).subscribe(() => {
-      this.goToCarList();
-    });
+  deleteCar(car: car){
+    this.carService.deleteCarById(car.id)
+    .subscribe(() => this.goToCarList());
   }
 
   goToCarList (){
